@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" href="{{ config.ASSETS_ROOT }}/img/favicon.png">
 
     <title>
-        Flask Dashboard Black - {% block title %}{% endblock %} | AppSeed
+        Quick Link | {% block title %}{% endblock %}
     </title>
 
     <!--     Fonts and icons     -->
@@ -47,7 +47,7 @@
 
         {% include 'includes/sidebar.html' %}
 
-        <div class="main-panel">
+        <div class="main-panel" data="blue">
 
             {% include 'includes/navigation.html' %}
 
@@ -57,8 +57,6 @@
 
         </div>
     </div>
-
-    {% include 'includes/fixed-plugin.html' %}
 
     {% include 'includes/scripts.html' %}
 
