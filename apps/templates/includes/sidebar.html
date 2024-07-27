@@ -1,24 +1,26 @@
-
-    <div class="sidebar" data="blue">
-        <!--
+<div class="sidebar" data="blue">
+  <!--
           Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
       -->
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="javascript:void(0)" class="simple-text logo-mini">
-                    <img src="{{ url_for('static', filename='assets/img/favicon.png') }}" alt="logo">
-                </a>
-                <a href="javascript:void(0)" class="simple-text logo-normal">
-                    Quick Link
-                </a>
-            </div>
-            <ul class="nav">
-                <li class="{% if 'home' in segment %} active {% endif %}">
-                    <a href="/home.html">
-                        <i class="tim-icons icon-scissors"></i>
-                        <p>Home</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="javascript:void(0)" class="simple-text logo-mini">
+        <img
+          src="{{ url_for('static', filename='assets/img/favicon.png') }}"
+          alt="logo"
+        />
+      </a>
+      <a href="javascript:void(0)" class="simple-text logo-normal">
+        Quick Link
+      </a>
     </div>
+    <ul class="nav">
+      <li class="{% if 'home' in segment %} active {% endif %}">
+        <a href="{{ url_for('home_blueprint.index') }}">
+          <i class="tim-icons icon-scissors"></i>
+          <p>Home</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

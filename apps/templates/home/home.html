@@ -10,23 +10,27 @@ content %}
             <h1>Shorten your URLs in the simplest way!</h1>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group py-5">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your URL here"
-                />
+          <form method="POST" action="{{ url_for('home_blueprint.shorten_url') }}">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group py-5">
+                  <input
+                    type="text"
+                    name="long_url"
+                    class="form-control"
+                    placeholder="Enter your URL here"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card-footer center">
-          <button type="submit" class="btn btn-fill btn-info">
-            Shorten URL
-          </button>
-        </div>
+          <div class="card-footer center">
+            <button type="submit" class="btn btn-fill btn-info">
+              Shorten URL
+            </button>
+          </div>
+          </form>
+
       </div>
     </div>
   </div>
